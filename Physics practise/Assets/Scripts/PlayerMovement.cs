@@ -20,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = transform.forward * speed;
         }
 
-        if (Input.GetKey("a"))
+        if (Input.GetKey("d"))
         {
             transform.Rotate(Vector3.up * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey("d"))
+        if (Input.GetKey("a"))
         {
             transform.Rotate(Vector3.up * -speed * Time.deltaTime);
 
