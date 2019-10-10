@@ -10,6 +10,8 @@ public class BulletMovement : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
 
         rb.velocity = transform.forward * bulletSpeed;
+
+        Destroy(gameObject, 5.0f);
     }
 
 }

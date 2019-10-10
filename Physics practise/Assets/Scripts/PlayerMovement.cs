@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody rb;
     public float speed = 10.0f;
-    public float rotationSpeed = 5000f;
+    public float rotationSpeed = 10f;
 
     void Start()
     {
@@ -22,12 +22,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("d"))
         {
-            transform.Rotate(Vector3.up * speed * Time.deltaTime);
+            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
         }
 
         if (Input.GetKey("a"))
         {
-            transform.Rotate(Vector3.up * -speed * Time.deltaTime);
+            transform.Rotate(Vector3.up * -rotationSpeed * Time.deltaTime);
 
         }
 
