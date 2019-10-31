@@ -5,8 +5,12 @@ public class Group : MonoBehaviour
 {
     private CanvasGroup m_group;
 
-	// Use this for initialization
-	void Start ()
+    [SerializeField]
+    private SoundManager soundManager;
+
+
+    // Use this for initialization
+    void Start ()
     {
         m_group = GetComponent<CanvasGroup>();
 
@@ -21,10 +25,12 @@ public class Group : MonoBehaviour
             if(m_group.alpha == 0)
             {
                 m_group.alpha = 1;
+                soundManager.MenuModeOn();
             }
             else
             {
                 m_group.alpha = 0;
+                soundManager.GameModeOn();
             }
         }
 	}

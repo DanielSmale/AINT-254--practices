@@ -261,6 +261,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &168440305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168440307}
+  - component: {fileID: 168440306}
+  m_Layer: 0
+  m_Name: Audio Reverb Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!167 &168440306
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168440305}
+  m_Enabled: 1
+  m_MinDistance: 14.875423
+  m_MaxDistance: 26.263613
+  m_ReverbPreset: 1
+  m_Room: -1000
+  m_RoomHF: -100
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.83
+  m_Reflections: -2602
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 200
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
+--- !u!4 &168440307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168440305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364635041
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f852e4b39448dbd46939cccf88908093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 890640817}
 --- !u!225 &504687557
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -868,6 +924,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 49884b8dc8191614880af0fea9ef50fe, type: 2}
+  gameMode: {fileID: -2190747908179019921, guid: 49884b8dc8191614880af0fea9ef50fe,
+    type: 2}
+  menuMode: {fileID: 891205104508139076, guid: 49884b8dc8191614880af0fea9ef50fe, type: 2}
 --- !u!4 &890640818
 Transform:
   m_ObjectHideFlags: 0
@@ -1376,7 +1435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011137779300, guid: 56026a6f985650d41a6e1aff5a95e532, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -25.22
       objectReference: {fileID: 0}
     - target: {fileID: 4000011137779300, guid: 56026a6f985650d41a6e1aff5a95e532, type: 3}
       propertyPath: m_LocalRotation.x

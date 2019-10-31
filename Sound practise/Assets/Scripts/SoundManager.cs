@@ -9,6 +9,12 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioMixer audioMixer;
 
+    [SerializeField]
+    private AudioMixerSnapshot gameMode;
+
+    [SerializeField]
+    private AudioMixerSnapshot menuMode;
+
 
     public void SetAmbientVolume(float _volume)
     {
@@ -17,8 +23,16 @@ public class SoundManager : MonoBehaviour
 
         audioMixer.SetFloat("AmbientVolume", _volume);
 
+    }
 
+    public void GameModeOn()
+    {
+        gameMode.TransitionTo(0.5f);
+    }
 
+    public void MenuModeOn()
+    {
+        menuMode.TransitionTo(0.5f);
     }
 
 }
