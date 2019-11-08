@@ -29,7 +29,7 @@ public class Sound : MonoBehaviour
 
         //we scale the object on y based on m_rmsValue
         Vector3 scale = transform.localScale;
-        scale.y = m_scaleY + m_scaleSample * m_rmsValue;
+        scale.y = (m_scaleY + m_scaleSample * m_rmsValue) * 2;
         transform.localScale = scale;
 
         Vector3 pos = new Vector3(0, transform.localScale.y * 0.5f, 0);
